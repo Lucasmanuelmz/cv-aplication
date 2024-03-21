@@ -1,5 +1,7 @@
-export default function Button({text}) {
+
+
+export default function Button({ text }) {
     return (
-        <button type="submit" >{text}</button>
+        <button type="submit">{text}</button>
     )
 }

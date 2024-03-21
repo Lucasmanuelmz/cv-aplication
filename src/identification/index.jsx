@@ -1,4 +1,4 @@
-import Button from "../button";
+
 
 export default function PersonInformation({ firstName, lastName, email, tel, onInputChange }) {
     function handleChange(e) {
@@ -23,8 +23,6 @@ export default function PersonInformation({ firstName, lastName, email, tel, onI
             <label className="label" htmlFor="tel">Tel:</label>
             <input type="tel" name="tel" value={tel} onChange={handleChange}
                 className="input" id="tel" placeholder="Tel:" />
-
-            <Button text='Edit' />
 
         </fieldset>
     )

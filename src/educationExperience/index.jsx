@@ -1,4 +1,3 @@
-import Button from "../button";
 
 export default function ExperienceSchool({educationLevel, school, graduationYear,  onInputChange }) {
     function handleChange(e) {
@@ -15,7 +14,7 @@ export default function ExperienceSchool({educationLevel, school, graduationYear
                 <option value='Elementary School'>Elementary School</option>
                 <option value='High School'>High School</option>
                 <option value='Higher Education'>Higher Education or College/University</option>
-                <option value='Graduate Studies'>Graduate Studies (Master's, Doctorate)</option>
+                <option value='Graduate Studies'>Graduate Studies (Masters, Doctorate)</option>
                 <option value='Technical Education'>Vocational or Technical Education</option>
             </select>
 
@@ -28,8 +27,6 @@ export default function ExperienceSchool({educationLevel, school, graduationYear
             <input type="date" name="graduationYear" value={graduationYear}
                 onChange={handleChange} className="input" id="graduationYear"
                 placeholder="Graduation year" />
-
-            <Button text='Edit' />
 
         </fieldset>
     )

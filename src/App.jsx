@@ -36,26 +36,36 @@ export default function App() {
     })
   }
 
+  function handleEditData(data, personData) {
+    setPerson({
+      ...person,
+      [data]: personData,
+    })
+  }
+
   return (
     <div>
       <Header />
       <div className="container" >
         {!isSent? (
-      <form className="form" onSubmit={handleSubmit} >
-        <PersonInformation onInputChange={handleChangeInput}
-          firstName={person.firstName} lastName={person.lastName}
-          email={person.email} tel={person.tel} />
+          <form className="form" onSubmit={handleSubmit} >
+            <div className="formContainer">
+              <PersonInformation onInputChange={handleChangeInput}
+              firstName={person.firstName} lastName={person.lastName}
+              email={person.email} tel={person.tel} />
         
-        <ExperienceSchool onInputChange={handleChangeInput}
-          educationLevel={person.educationLevel} school={person.school}
-          graduationYear={person.graduationYear} /> 
-        
-        <WorkingExperience company={person.company} position={person.position} description={person.description}
-          start={person.start} finish={person.finish} onInputChange={handleChangeInput} />
+              <ExperienceSchool onInputChange={handleChangeInput}
+              educationLevel={person.educationLevel} school={person.school}
+                graduationYear={person.graduationYear} />
+            </div> 
+           <div className="companyContainer">
+             <WorkingExperience company={person.company} position={person.position} description={person.description}
+              start={person.start} finish={person.finish} onInputChange={handleChangeInput} />
       
-        <Button text='Submit' />
+              <Button text='Submit' />
+            </div>
         </form> ):
-          < DisplayData  firstName={person.firstName} lastName={person.lastName}
+          < DisplayData firstName={person.firstName} onEditData={handleEditData} onInputChange={handleChangeInput} lastName={person.lastName}
           email={person.email} tel={person.tel} educationLevel={person.educationLevel} school={person.school}
           graduationYear={person.graduationYear} company={person.company} position={person.position} description={person.description}
           start={person.start} finish={person.finish} />

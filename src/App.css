@@ -3,19 +3,17 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-p, li {
+p {
   color: #343658;
-  font-size: calc(.2rem + 1vw);
-}
-
-ul {
-  max-width: 500px;
+  font-size: 18px;
+  width: clamp(45ch, 60%, 75ch);
 }
 
 .header {
@@ -27,46 +25,76 @@ ul {
 
 .container {
   display: flex;
-  background-color: #fff;
+  background-color: #f0f0f0;
   margin: 20px auto;
-  max-width: 600px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+
 }
 
 .form  {
-  max-width: 300px;
-  background-color: #3db695;
+  max-width: 1200px auto;
+  background-color:#fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.formContainer{
+  width: 450px;
+  margin-right: 15px;
   padding: 1rem;
 }
 
-.form .label + .input {
-  display: block;
-  font-size: 16px;
+.companyContainer {
+  width: 450px;
+  margin-left: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
-  color: #c5ede3;
+  color: #0e0c0c;
+  font-size: 18px;
+  display: block;
+  font-weight: 600;
+}
+
+.select {
+  display: block;
+  max-width: 400px;
+  margin: 15px 0;
 }
 
 .input {
   margin: 7px 0;
+  width: 400px;
+  display: block;
+  padding: 5px;
 }
 
 .legend {
-  font-size: calc(.3rem + 1.4vw);
+  font-size: 24px;
   font-weight: 600;
-  color: #c5ede3;
+  color: #0e0c0c;
 }
 
 .fieldset {
   margin: 15px 0;
-  border: solid .5px #c5ede3;
-  border-left: none;
-  border-right: none;
+  border: none;
+ 
 }
-
 .content {
   background-color: #fff;
   padding: 2rem;
+  width: 750px;
 }
 
 .container-name {
@@ -89,9 +117,28 @@ ul {
 
 .professional> h3 {
   color: rgb(16, 16, 126);
-  font-size: calc(.5rem + 1.2vw);
+  font-size: 16px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
+
+button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #343658;
+  color: #fff;
+  border: none;
+  align-self: flex-end;
+  box-sizing: 2px 3px 3px #7e7a7a;
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color 3s ease;
+}
+
+button:hover {
+  background-color: #0e0c0c;
+}
+
 

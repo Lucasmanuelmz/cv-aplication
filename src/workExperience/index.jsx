@@ -1,5 +1,3 @@
-import Button from "../button";
-
 export default function WorkingExperience({ company, position, description, start, finish,  onInputChange }) {
     function handleChange(e) {
         const { name, value } = e.target;
@@ -28,9 +26,6 @@ export default function WorkingExperience({ company, position, description, star
             <label className="label" htmlFor="finish">Finish of work:</label>
             <input type="date" name="finish" value={finish} onChange={handleChange}
                 className="input" id="finish" placeholder="Finish of work" />
-
-            <Button text='Edit' />
-
         </fieldset>
     )
 }
