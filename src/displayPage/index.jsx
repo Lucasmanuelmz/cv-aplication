@@ -39,12 +39,12 @@ export default function DisplayData({
                 <div className="content">
             <legend className="legend">Personal Data</legend>
             <label className="label" htmlFor="firstName">You Name:</label>
-            <input type="text" pattern="^[A-Z][a-zA-Z]+$" autoComplete="givenName" name="firstName" value={firstName} id="firstName" onChange={handleChange}
-                className="input" placeholder="First name" required/>
+            <input type="text" pattern="^[A-Z][a-zA-Z]+$" autoComplete="givenName" name="firstName" value={firstName}
+            id="firstName" onChange={handleChange} className="input" placeholder="First name" required/>
 
             <label className="label" htmlFor="lastName">Surname:</label>
-            <input  pattern="^[A-Z][a-zA-Z]+$" type="text" name="lastName" value={lastName} onChange={handleChange}
-                className="input" id='lastName' placeholder="Surname" required/>
+            <input pattern="^[A-Z][a-zA-Z]+$" type="text" name="lastName" value={lastName}
+            onChange={handleChange} className="input" id='lastName' placeholder="Surname" required/>
 
             <label className="label" htmlFor="email">Email:</label>
             <input type="email" name="email" value={email} onChange={handleChange}
