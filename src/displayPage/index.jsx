@@ -47,7 +47,7 @@ export default function DisplayData({
             onChange={handleChange} className="input" id='lastName' placeholder="Surname" required/>
 
             <label className="label" htmlFor="email">Email:</label>
-            <input type="email" name="email" value={email} onChange={handleChange}
+            <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" name="email" value={email} onChange={handleChange}
                 className="input" id="email" placeholder="Email" required/>
 
             <label className="label" htmlFor="tel">Tel:</label>
