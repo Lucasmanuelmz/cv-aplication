@@ -3,7 +3,7 @@ export default function Header() {
     return (
         <header className="header">
             <nav className="nav">
-                <a href="#">cvApp</a>
+                <a href="#">cvapp</a>
             </nav>
         </header>
     )

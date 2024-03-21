@@ -1,9 +1,10 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #e9e8f0;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100vw;
 }
 
 * {
@@ -13,21 +14,24 @@ body {
 p {
   color: #343658;
   font-size: 18px;
-  width: clamp(45ch, 60%, 75ch);
+  width: max(40rem, 60%);
 }
 
 .header {
   background-color: #ffffff;
-  margin: 0;
-  box-shadow: 1px 1px 1px #ddd;
-  padding: 1.2rem;
+  box-shadow: 1px 2px 2px #ddd;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
 }
 
 .container {
   display: flex;
-  background-color: #f0f0f0;
-  margin: 20px auto;
-  width: 100vw;
+  background-color: #e9e8f0;
+  margin: 100px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,13 +41,14 @@ p {
 }
 
 .form  {
-  max-width: 1200px auto;
+  max-width: 1000px auto;
   background-color:#fff;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  box-shadow: #7e7a7a 3px 3px 3px;
 }
 
 .formContainer{
@@ -139,6 +144,13 @@ button {
 
 button:hover {
   background-color: #0e0c0c;
+}
+
+a {
+  color: #343658;
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: 1000;
 }
 
 

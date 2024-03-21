@@ -9,7 +9,7 @@ export default function ExperienceSchool({educationLevel, school, graduationYear
             <legend className="legend">Education</legend>
             <label className="label" htmlFor="educationLevel">Educational level:</label>
             <select className="select" onChange={handleChange} name="educationLevel"
-                id="educationLevel" value={educationLevel}>
+                id="educationLevel" value={educationLevel} required>
                 <option>Select level</option>
                 <option value='Elementary School'>Elementary School</option>
                 <option value='High School'>High School</option>
@@ -20,13 +20,13 @@ export default function ExperienceSchool({educationLevel, school, graduationYear
 
             <label className="label" htmlFor="school">School:</label>
             <input type="text" name="school" value={school}
-                onChange={handleChange} className="input" id='school'
-                placeholder="School" />
+                onChange={handleChange}  pattern="^[A-Za-z]+$" className="input" id='school'
+                placeholder="School" required />
 
             <label className="label" htmlFor="graduationYear">Graduation year:</label>
             <input type="date" name="graduationYear" value={graduationYear}
                 onChange={handleChange} className="input" id="graduationYear"
-                placeholder="Graduation year" />
+                placeholder="Graduation year" required />
 
         </fieldset>
     )
