@@ -6,6 +6,7 @@ import ExperienceSchool from "./educationExperience";
 import WorkingExperience from "./workExperience";
 import Button from "./button";
 import DisplayData from "./displayPage";
+import Footer from "./Footer";
 
 export default function App() {
   const [isSent, setIsSent] = useState(false);
@@ -44,7 +45,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="max-container">
       <Header />
       <div className="container" >
         {!isSent? (
@@ -69,8 +70,10 @@ export default function App() {
           email={person.email} tel={person.tel} educationLevel={person.educationLevel} school={person.school}
           graduationYear={person.graduationYear} company={person.company} position={person.position} description={person.description}
           start={person.start} finish={person.finish} />
-      }
+        }
+       
       </div>
+      <Footer />
     </div>
   )
 }
