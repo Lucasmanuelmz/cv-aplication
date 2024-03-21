@@ -28,6 +28,26 @@ p {
   left: 0;
 }
 
+.header > .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.icons {
+  color: #343658;
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.icons > .img {
+  width: 30px;
+}
+
 .container {
   display: flex;
   background-color: #e9e8f0;
@@ -146,11 +166,5 @@ button:hover {
   background-color: #0e0c0c;
 }
 
-a {
-  color: #343658;
-  font-size: 32px;
-  text-decoration: none;
-  font-weight: 1000;
-}
 
 
